@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="bootstrap/js/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .focus {
+            width: 800px;
+            height: 300px;
+            background-color: pink;
+            margin: 100px auto;
+        }
+
+        .carousel,
+        .carousel img {
+            width: 100%;
+            height: 300px !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="focus">
+        <div id="carouselExampleIndicators" class="carousel slide">
+            <!-- Indicators 小圆点 -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <!-- Wrapper for slides 轮播图片 -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="upload/banner.dpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        这是我的图片 1
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="upload/banner1.dpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        这是我的图片 2
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="upload/banner2.dpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        这是我的图片 3
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controls 左右箭头 -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <script>
+        $('.carousel').carousel({
+            interval: 2000
+        })
+    </script>
+</body>
+
+</html>

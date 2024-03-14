@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- 引入 bootstrap 样式文件 -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <!-- 引入我们自己的首页样式文件 -->
+    <link rel="stylesheet" href="css/index.css">
+    <!-- 先引入 jquery js 文件 -->
+    <script src="bootstrap/js/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">阿里百秀</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">生活馆</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">自然汇</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">科技湖</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">奇趣事</a>
+                            </li>
+                            <a class="nav-link" href="#">美食节</a>
+                            </li>
+
+                        </ul>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-1" type="search" placeholder="搜索" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit" style="min-width: 80px;">搜索</button>
+                        </form>
+                        <ul class="navbar-nav me-2 mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#" data-bs-toggle="modal"
+                                    data-bs-target=".login">登录</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">注册</a>
+                            </li>
+
+
+                        </ul>
+                        <!-- 模态框 -->
+                        <div class="modal login" tabindex="-1">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">登录信息</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="mb-3">
+                                                <label for="exampleInputEmail1" class="form-label">邮箱名登录</label>
+                                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                                    aria-describedby="emailHelp">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="exampleInputPassword1" class="form-label">密码</label>
+                                                <input type="password" class="form-control" id="exampleInputPassword1">
+                                            </div>
+                                            <div class="mb-3 form-check">
+                                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                                <label class="form-check-label" for="exampleCheck1">记住用户名</label>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">关闭</button>
+                                        <button type="button" class="btn btn-primary">保存</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="row">
+            <header class="col-md-2">
+                <div class="logo">
+                    <a href="#">
+                        <img src="images/logo.png" alt="" class="d-none d-sm-block">
+                        <span class="d-block d-sm-none">阿里百秀</span>
+                    </a>
+                </div>
+                <div class="nav1">
+                    <ul>
+                        <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-camera-fill" viewBox="0 0 16 16">
+                                    <path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+                                    <path
+                                        d="M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0z" />
+                                </svg>生活馆</a></li>
+                        <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-image" viewBox="0 0 16 16">
+                                    <path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                                    <path
+                                        d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-12zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1h12z" />
+                                </svg>自然汇</a></li>
+                        <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-phone" viewBox="0 0 16 16">
+                                    <path
+                                        d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z" />
+                                    <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                                </svg>科技湖</a></li>
+                        <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-gift-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3 2.5a2.5 2.5 0 0 1 5 0 2.5 2.5 0 0 1 5 0v.006c0 .07 0 .27-.038.494H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2.038A2.968 2.968 0 0 1 3 2.506V2.5zm1.068.5H7v-.5a1.5 1.5 0 1 0-3 0c0 .085.002.274.045.43a.522.522 0 0 0 .023.07zM9 3h2.932a.56.56 0 0 0 .023-.07c.043-.156.045-.345.045-.43a1.5 1.5 0 0 0-3 0V3zm6 4v7.5a1.5 1.5 0 0 1-1.5 1.5H9V7h6zM2.5 16A1.5 1.5 0 0 1 1 14.5V7h6v9H2.5z" />
+                                </svg>奇趣事</a></li>
+                        <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-cup-straw" viewBox="0 0 16 16">
+                                    <path
+                                        d="M13.902.334a.5.5 0 0 1-.28.65l-2.254.902-.4 1.927c.376.095.715.215.972.367.228.135.56.396.56.82 0 .046-.004.09-.011.132l-.962 9.068a1.28 1.28 0 0 1-.524.93c-.488.34-1.494.87-3.01.87-1.516 0-2.522-.53-3.01-.87a1.28 1.28 0 0 1-.524-.93L3.51 5.132A.78.78 0 0 1 3.5 5c0-.424.332-.685.56-.82.262-.154.607-.276.99-.372C5.824 3.614 6.867 3.5 8 3.5c.712 0 1.389.045 1.985.127l.464-2.215a.5.5 0 0 1 .303-.356l2.5-1a.5.5 0 0 1 .65.278zM9.768 4.607A13.991 13.991 0 0 0 8 4.5c-1.076 0-2.033.11-2.707.278A3.284 3.284 0 0 0 4.645 5c.146.073.362.15.648.222C5.967 5.39 6.924 5.5 8 5.5c.571 0 1.109-.03 1.588-.085l.18-.808zm.292 1.756C9.445 6.45 8.742 6.5 8 6.5c-1.133 0-2.176-.114-2.95-.308a5.514 5.514 0 0 1-.435-.127l.838 8.03c.013.121.06.186.102.215.357.249 1.168.69 2.438.69 1.27 0 2.081-.441 2.438-.69.042-.029.09-.094.102-.215l.852-8.03a5.517 5.517 0 0 1-.435.127 8.88 8.88 0 0 1-.89.17zM4.467 4.884s.003.002.005.006l-.005-.006zm7.066 0-.005.006c.002-.004.005-.006.005-.006zM11.354 5a3.174 3.174 0 0 0-.604-.21l-.099.445.055-.013c.286-.072.502-.149.648-.222z" />
+                                </svg>美食节</a></li>
+                    </ul>
+                </div>
+            </header>
+            <article class="col-md-7">
+                <!-- 新闻 -->
+                <div class="news clearfix">
+                    <ul>
+                        <li>
+                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active" data-bs-interval="2000">
+                                        <img src="upload/banner.dpg" class="d-block w-100" alt="...">
+                                        <div class="carousel-caption d-none d-md-block">
+                                            阿里百秀 1
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item" data-bs-interval="2000">
+                                        <img src="upload/banner1.dpg" class="d-block w-100" alt="...">
+                                        <div class="carousel-caption d-none d-md-block">
+                                            阿里百秀 2
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item" data-bs-interval="2000">
+                                        <img src="upload/banner2.dpg" class="d-block w-100" alt="...">
+                                        <div class="carousel-caption d-none d-md-block">
+                                            阿里百秀 3
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button"
+                                    data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button"
+                                    data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="upload/1.jpg" alt="">
+                                <p>奇了 成都一小区护卫长得像马云 市民纷纷求合影</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <img src="upload/2.jpg" alt="">
+                                <p>奇了 成都一小区护卫长得像马云 市民纷纷求合影</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <img src="upload/3.jpg" alt="">
+                                <p>奇了 成都一小区护卫长得像马云 市民纷纷求合影</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <img src="upload/4.jpg" alt="">
+                                <p>奇了 成都一小区护卫长得像马云 市民纷纷求合影</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <!-- 发表 -->
+                <div class="publish">
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <h3>生活馆 关于指甲的10个健康知识 你知道几个？</h3>
+                            <p class="text-muted d-none d-sm-block">alibaixiu 发布于 2015-11-23</p>
+                            <p class="d-none d-sm-block">指甲是经常容易被人们忽略的身体部位， 事实上从指甲的健康状况可以看出一个人的身体健康状况， 快来看看10个暗藏在指甲里知识吧！</p>
+                            <p class="text-muted">阅读(2417)评论(1)赞 (18) <span class="d-none d-sm-block">标签：健康 / 感染 / 指甲 / 疾病 / 皮肤
+                                    / 营养 / 趣味生活</span>
+
+                            </p>
+                        </div>
+                        <div class="col-sm-3 pic d-none d-sm-block">
+                            <img src="upload/3.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <h3>生活馆 关于指甲的10个健康知识 你知道几个？</h3>
+                            <p class="text-muted d-none d-sm-block">alibaixiu 发布于 2015-11-23</p>
+                            <p class="d-none d-sm-block">指甲是经常容易被人们忽略的身体部位， 事实上从指甲的健康状况可以看出一个人的身体健康状况， 快来看看10个暗藏在指甲里知识吧！</p>
+                            <p class="text-muted">阅读(2417)评论(1)赞 (18) <span class="d-none d-sm-block">标签：健康 / 感染 / 指甲 / 疾病 / 皮肤
+                                    / 营养 / 趣味生活</span>
+
+                            </p>
+                        </div>
+                        <div class="col-sm-3 pic d-none d-sm-block">
+                            <img src="upload/3.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <h3>生活馆 关于指甲的10个健康知识 你知道几个？</h3>
+                            <p class="text-muted d-none d-sm-block">alibaixiu 发布于 2015-11-23</p>
+                            <p class="d-none d-sm-block">指甲是经常容易被人们忽略的身体部位， 事实上从指甲的健康状况可以看出一个人的身体健康状况， 快来看看10个暗藏在指甲里知识吧！</p>
+                            <p class="text-muted">阅读(2417)评论(1)赞 (18) <span class="d-none d-sm-block">标签：健康 / 感染 / 指甲 / 疾病 / 皮肤
+                                    / 营养 / 趣味生活</span>
+
+                            </p>
+                        </div>
+                        <div class="col-sm-3 pic d-none d-sm-block">
+                            <img src="upload/3.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <h3>生活馆 关于指甲的10个健康知识 你知道几个？</h3>
+                            <p class="text-muted d-none d-sm-block">alibaixiu 发布于 2015-11-23</p>
+                            <p class="d-none d-sm-block">指甲是经常容易被人们忽略的身体部位， 事实上从指甲的健康状况可以看出一个人的身体健康状况， 快来看看10个暗藏在指甲里知识吧！</p>
+                            <p class="text-muted">阅读(2417)评论(1)赞 (18) <span class="d-none d-sm-block">标签：健康 / 感染 / 指甲 / 疾病 / 皮肤
+                                    / 营养 / 趣味生活</span>
+
+                            </p>
+                        </div>
+                        <div class="col-sm-3 pic d-none d-sm-block">
+                            <img src="upload/3.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <h3>生活馆 关于指甲的10个健康知识 你知道几个？</h3>
+                            <p class="text-muted d-none d-sm-block">alibaixiu 发布于 2015-11-23</p>
+                            <p class="d-none d-sm-block">指甲是经常容易被人们忽略的身体部位， 事实上从指甲的健康状况可以看出一个人的身体健康状况， 快来看看10个暗藏在指甲里知识吧！</p>
+                            <p class="text-muted">阅读(2417)评论(1)赞 (18) <span class="d-none d-sm-block">标签：健康 / 感染 / 指甲 / 疾病 / 皮肤
+                                    / 营养 / 趣味生活</span>
+
+                            </p>
+                        </div>
+                        <div class="col-sm-3 pic d-none d-sm-block">
+                            <img src="upload/3.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </article>
+            <aside class="col-md-3">
+                <a href="#" class="banner">
+                    <img src="upload/zgboke.jpg" alt="">
+                </a>
+                <a href="#" class="hot">
+                    <span class="btn btn-primary">热搜</span>
+                    <h4 class="text-primary">欢迎加入中国博客联盟</h4>
+                    <p>这里收录国内各个领域的优秀博客，是一个全人工编辑的开放式博客联盟交流和展示平台......</p>
+                </a>
+                <div style="margin-top: 10px;">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
+                                data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane"
+                                aria-selected="true">热搜</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="profile-tab" data-bs-toggle="tab"
+                                data-bs-target="#profile-tab-pane" type="button" role="tab"
+                                aria-controls="profile-tab-pane" aria-selected="false">排名</button>
+                        </li>
+
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel"
+                            aria-labelledby="home-tab" tabindex="0">
+                            热搜的相关内容</div>
+                        <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab"
+                            tabindex="0">排名的相关内容
+                        </div>
+
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+</body>
+
+</html>

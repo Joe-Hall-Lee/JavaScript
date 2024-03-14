@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>定制 ECharts 图表相关配置</title>
+    <script src="js/echarts.min.js"></script>
+    <style>
+        .box {
+            width: 450px;
+            height: 450px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <script>
+        var myChart = echarts.init(document.querySelector(".box"));
+        var option = {
+            title: {
+                text: "Stacked Line",
+            },
+            tooltip: {
+                trigger: "axis",
+            },
+            legend: {
+                data: [
+                    "Email",
+                    "Union Ads",
+                    "Video Ads",
+                    "Direct"
+                ],
+            },
+            grid: {
+                left: "3%",
+                right: "3%",
+                bottom: "3%",
+                // 当刻度标签溢出的时候，grid 区域是否包含坐标轴的刻度标签，如果改为 true，则显示刻度标签
+                // 如果 left、right 等设置为 0%，刻度标签就溢出了，此时决定是否显示刻度标签
+                containLabel: true,
+            },
+            toolbox: {
+                feature: {
+                    saveAsImage: {},
+                },
+            },
+            xAxis: {
+                type: "category",
+                // 坐标轴两边留白策略 true，这时候刻度只是作为分割线，标签和数据点都会在两个刻度之间的带（band）中间。
+                boundaryGap: false,
+                data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+            },
+            yAxis: {
+                type: "value",
+            },
+            series: [
+                {
+                    name: "Email",
+                    type: "line",
+                    stack: "Total",
+                    data: [120, 132, 101, 134, 90, 230, 210],
+                },
+                {
+                    name: "Union Ads",
+                    type: "line",
+                    stack: "Total",
+                    data: [220, 182, 191, 234, 290, 330, 310],
+                },
+                {
+                    name: "Video Ads",
+                    type: "line",
+                    stack: "Total",
+                    data: [150, 232, 201, 154, 190, 330, 410],
+                },
+                {
+                    name: "Direct",
+                    type: "line",
+                    stack: "Total",
+                    data: [320, 332, 301, 334, 390, 330, 320],
+                }
+            ],
+        };
+        myChart.setOption(option);
+    </script>
+</body>
+
+</html>
